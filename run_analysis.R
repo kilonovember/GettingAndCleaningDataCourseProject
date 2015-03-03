@@ -47,8 +47,6 @@ run_analysis <- function(save.to.file = FALSE, file.path = "./tidy-data.set.txt"
   # Replace the integer values in the activity list with the text equivalents 
   # as called out in *activity_labels.txt*
   #
-  activityLabels <- scan("./UCI HAR Dataset/activity_labels.txt", what="character")
-  activityTextValues <- activityLabels[c(2,4,6,8,10,12)]
   activity[activity == 1] <- "WALKING" 
   activity[activity == 2] <- "WALKING_UPSTAIRS"
   activity[activity == 3] <- "WALKING_DOWNSTAIRS"
@@ -123,8 +121,6 @@ run_analysis <- function(save.to.file = FALSE, file.path = "./tidy-data.set.txt"
     write.table(df.averages, file.path, row.name=FALSE)
   }else if(save.to.file == TRUE & file.path == ""){
     stop("You have asked to save the file, but failed to provide a file name and path.")
-  }else if(save.to.file == FALSE & file.path != ""){
-    stop("File path supplied, but save.to.file is set to FALSE.")
   }
   df.averages
 }
