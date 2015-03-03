@@ -59,6 +59,8 @@ So if this is your first attempt, it's not you, it's the material.)
 |row.counter      |102              |an iterator variable for populating df.averages|106,107,108,110|
 
 
+
+
 ## 1. Merges the training and the test sets to create one data set.
 
 The first thing we need note is what a test or train set comprises.
@@ -201,7 +203,7 @@ At this point it will make the going easier if we rename the columns using the n
 	> # read features.txt into a vector
 	> colHeads <- read.table("features.txt")
 	> # rename columns of CombinedDataSets
-	> colnames(CombinedDataSets) <- as.character(colHeads)
+	> names(CombinedDataSets) <- colHeads
 	
 ### Now CombinedDataSets will look like this:
 
@@ -307,8 +309,6 @@ This was already accomplished in the step above immediately preceding Figure 8.
 	
 #### Replace the integer values in the activity list with the text equivalents as called out in *activity_labels.txt*
 
-	> activityLables <- scan("./activity_labels.txt", what="character")
-	> activityTextValues <- activityLabels[c(2,4,6,8,10,12)]
 	> activity[activity == 1] <- "WALKING"
 	> activity[activity == 2] <- "WALKING_UPSTAIRS"
 	> activity[activity == 3] <- "WALKING_DOWNSTAIRS"
