@@ -38,6 +38,7 @@ So if this is your first attempt, it's not you, it's the material.)
 **I found it convenient to alter the order of the steps. Don't let that throw you. Read down the file, taking the steps in the order presented rather than in numerical order.**
 
 ###Variable Names###
+
 |Name             |Created on Line #|Decription                                    |Referred to on Line #|
 |-----------------|     |-----------------|----------------------------------------------|---------------------|
 |trainTable       |13               |a table to hold the data from X_train.txt        |21|
