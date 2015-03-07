@@ -41,7 +41,23 @@ So if this is your first attempt, it's not you, it's the material.)
 
 |Name             |Created on Line #|Decription                                    |Referred to on Line #|
 |-----------------|-----------------|----------------------------------------------|---------------------|
-
+|trainTable       |13               |a table to hold the data from X_train.txt     |21                   |
+|testTable        |17               |a table to hold the data from X_test.txt      |21                   |
+|CombinedDataSets |21               |a table to hold combined trainTable and testTable|29,33|
+|colHeads         |25               |a table to hold the data from features.txt    |29|
+|SelectedData     |33               |a subset of CombinedDataSets holding only columns with mean and standard deviation data|61|
+|trainActivity    |37               |a vector to hold training activity identifiers   |45|
+|testActivity     |41               |a vector to hold testing activity identifiers    |45|
+|activity         |45               |a vector to hold the merged trainActivity and testActivity identifers|50,51,52,53,54,55|
+|ActivitiesSelectedData|59          |a table comprised of the activity text values bound to the SelectedData table|75|
+|trainingSubjIDs|64                 |a vector to hold the training subject identifiers|71|
+|testSubjIDs    |68                 |a vector to hold the testing subject identifiers|71|
+|subject        |71                 |a vector to hold the merged training and testing subject identifiers|75|
+|Step.5.1.SelectedData|75           |a table comprised of the subject identifiers bound to the ActivitiesSelectedData table|79, 92,94,96,110|
+|unique.subjects |89                |an ordered vector of subject identifiers|92,104,107,110|
+|unique.activities|90               |an ordered vector of activitty identifiers|92,105,108,110|
+|df.averages      |92               |a data frame to hold the tidy data set|96,107,108,110,121,125|
+|row.counter      |102              |an iterator variable for populating df.averages|106,107,108,110|
 
 
 
@@ -204,48 +220,7 @@ Figure 8.
 
 After looking at the ***features.txt*** file, I identified these columns as being those of interest. Your mileage may vary.:
 
-|   |                              |  |   |                              | 
-|---|------------------------------|  |---|------------------------------| 
-|  1|tBodyAcc-mean()-X             |  |254|tBodyGyroJerkMag-std()        | 
-|  2|tBodyAcc-mean()-Y             |  |266|fBodyAcc-mean()-X             | 
-|  3|tBodyAcc-mean()-Z             |  |267|fBodyAcc-mean()-Y             | 
-|  4|tBodyAcc-std()-X              |  |268|fBodyAcc-mean()-Z             | 
-|  5|tBodyAcc-std()-Y              |  |269|fBodyAcc-std()-X              | 
-|  6|tBodyAcc-std()-Z              |  |270|fBodyAcc-std()-Y              | 
-| 41|tGravityAcc-mean()-X          |  |271|fBodyAcc-std()-Z              | 
-| 42|tGravityAcc-mean()-Y          |  |294|fBodyAcc-meanFreq()-X         | 
-| 43|tGravityAcc-mean()-Z          |  |295|fBodyAcc-meanFreq()-Y         | 
-| 44|tGravityAcc-std()-X           |  |296|fBodyAcc-meanFreq()-Z         | 
-| 45|tGravityAcc-std()-Y           |  |345|fBodyAccJerk-mean()-X         | 
-| 46|tGravityAcc-std()-Z           |  |346|fBodyAccJerk-mean()-Y         | 
-| 81|tBodyAccJerk-mean()-X         |  |347|fBodyAccJerk-mean()-Z         | 
-| 82|tBodyAccJerk-mean()-Y         |  |348|fBodyAccJerk-std()-X          | 
-| 83|tBodyAccJerk-mean()-Z         |  |349|fBodyAccJerk-std()-Y          | 
-| 84|tBodyAccJerk-std()-X          |  |350|fBodyAccJerk-std()-Z          | 
-| 85|tBodyAccJerk-std()-Y          |  |373|fBodyAccJerk-meanFreq()-X     | 
-| 86|tBodyAccJerk-std()-Z          |  |374|fBodyAccJerk-meanFreq()-Y     | 
-|121|tBodyGyro-mean()-X            |  |375|fBodyAccJerk-meanFreq()-Z     | 
-|122|tBodyGyro-mean()-Y            |  |424|fBodyGyro-mean()-X            | 
-|123|tBodyGyro-mean()-Z            |  |425|fBodyGyro-mean()-Y            | 
-|124|tBodyGyro-std()-X             |  |426|fBodyGyro-mean()-Z            | 
-|125|tBodyGyro-std()-Y             |  |427|fBodyGyro-std()-X             | 
-|126|tBodyGyro-std()-Z             |  |428|fBodyGyro-std()-Y             | 
-|161|tBodyGyroJerk-mean()-X        |  |429|fBodyGyro-std()-Z             | 
-|162|tBodyGyroJerk-mean()-Y        |  |452|fBodyGyro-meanFreq()-X        | 
-|163|tBodyGyroJerk-mean()-Z        |  |453|fBodyGyro-meanFreq()-Y        | 
-|164|tBodyGyroJerk-std()-X         |  |454|fBodyGyro-meanFreq()-Z        | 
-|165|tBodyGyroJerk-std()-Y         |  |503|fBodyAccMag-mean()            | 
-|166|tBodyGyroJerk-std()-Z         |  |504|fBodyAccMag-std()             | 
-|201|tBodyAccMag-mean()            |  |513|fBodyAccMag-meanFreq()        | 
-|202|tBodyAccMag-std()             |  |516|fBodyBodyAccJerkMag-mean()    | 
-|214|tGravityAccMag-mean()         |  |517|fBodyBodyAccJerkMag-std()     | 
-|215|tGravityAccMag-std()          |  |526|fBodyBodyAccJerkMag-meanFreq()| 
-|227|tBodyAccJerkMag-mean()        |  |529|fBodyBodyGyroMag-mean()       | 
-|228|tBodyAccJerkMag-std()         |  |530|fBodyBodyGyroMag-std()        | 
-|240|tBodyGyroMag-mean()           |  |539|fBodyBodyGyroMag-meanFreq()   | 
-|241|tBodyGyroMag-std()            |  |542|fBodyBodyGyroJerkMag-mean()   | 
-|253|tBodyGyroJerkMag-mean()       |  |543|fBodyBodyGyroJerkMag-std()    | 
-|   |                              |  |552|fBodyBodyGyroJerkMag-meanFreq()|
+
 
 Figure 9.
 
