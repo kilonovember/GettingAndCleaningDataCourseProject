@@ -40,24 +40,7 @@ So if this is your first attempt, it's not you, it's the material.)
 ###Variable Names###
 
 |Name             |Created on Line #|Decription                                    |Referred to on Line #|
-|-----------------|     |-----------------|----------------------------------------------|---------------------|
-|trainTable       |13               |a table to hold the data from X_train.txt        |21|
-|testTable        |17               |a table to hold the data from X_test.txt         |21|
-|CombinedDataSets |21               |a table to hold combined trainTable and testTable|29,33|
-|colHeads         |25               |a table to hold the data from features.txt       |29|
-|SelectedData     |33               |a subset of CombinedDataSets holding only columns with mean and standard deviation data|61|
-|trainActivity    |37               |a vector to hold training activity identifiers   |45|
-|testActivity     |41               |a vector to hold testing activity identifiers    |45|
-|activity         |45               |a vector to hold the merged trainActivity and testActivity identifers|50,51,52,53,54,55|
-|ActivitiesSelectedData|59          |a table comprised of the activity text values bound to the SelectedData table|75|
-|trainingSubjIDs|64                 |a vector to hold the training subject identifiers|71|
-|testSubjIDs    |68                 |a vector to hold the testing subject identifiers|71|
-|subject        |71                 |a vector to hold the merged training and testing subject identifiers|75|
-|Step.5.1.SelectedData|75           |a table comprised of the subject identifiers bound to the ActivitiesSelectedData table|79, 92,94,96,110|
-|unique.subjects |89                |an ordered vector of subject identifiers|92,104,107,110|
-|unique.activities|90               |an ordered vector of activitty identifiers|92,105,108,110|
-|df.averages      |92               |a data frame to hold the tidy data set|96,107,108,110,121,125|
-|row.counter      |102              |an iterator variable for populating df.averages|106,107,108,110|
+|-----------------|-----------------|----------------------------------------------|---------------------|
 
 
 
@@ -395,7 +378,7 @@ First I'll create a new data frame to hold the data. This will have the same col
         		df.averages[row.counter,m] <- mean(Step.5.1.SelectedData[,m][Step.5.1.SelectedData$subject == unique.subjects[s] & Step.5.1.SelectedData$activity == unique.activities[a]])
       		}
     	}
-	}
+}
 
 
 
