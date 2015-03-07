@@ -220,6 +220,36 @@ Figure 8.
 
 After looking at the ***features.txt*** file, I identified these columns as being those of interest. Your mileage may vary.:
 
+|ID |Measure                       |  |ID |Measure                       |  |ID |Measure                       |
+|---|------------------------------|--|---|------------------------------|--|---|------------------------------|
+|  1|tBodyAcc-mean()-X             |  |165|tBodyGyroJerk-std()-Y         |  |374|fBodyAccJerk-meanFreq()-Y     |
+|  2|tBodyAcc-mean()-Y             |  |166|tBodyGyroJerk-std()-Z         |  |375|fBodyAccJerk-meanFreq()-Z     |
+|  3|tBodyAcc-mean()-Z             |  |201|tBodyAccMag-mean()            |  |424|fBodyGyro-mean()-X            |
+|  4|tBodyAcc-std()-X              |  |202|tBodyAccMag-std()             |  |425|fBodyGyro-mean()-Y            |
+|  5|tBodyAcc-std()-Y              |  |214|tGravityAccMag-mean()         |  |426|fBodyGyro-mean()-Z            |
+|  6|tBodyAcc-std()-Z              |  |215|tGravityAccMag-std()          |  |427|fBodyGyro-std()-X             |
+| 41|tGravityAcc-mean()-X          |  |227|tBodyAccJerkMag-mean()        |  |428|fBodyGyro-std()-Y             |
+| 42|tGravityAcc-mean()-Y          |  |228|tBodyAccJerkMag-std()         |  |429|fBodyGyro-std()-Z             |
+| 43|tGravityAcc-mean()-Z          |  |240|tBodyGyroMag-mean()           |  |452|fBodyGyro-meanFreq()-X        |
+| 44|tGravityAcc-std()-X           |  |241|tBodyGyroMag-std()            |  |453|fBodyGyro-meanFreq()-Y        |
+| 45|tGravityAcc-std()-Y           |  |253|tBodyGyroJerkMag-mean()       |  |454|fBodyGyro-meanFreq()-Z        |
+| 46|tGravityAcc-std()-Z           |  |254|tBodyGyroJerkMag-std()        |  |503|fBodyAccMag-mean()            |
+| 81|tBodyAccJerk-mean()-X         |  |266|fBodyAcc-mean()-X             |  |504|fBodyAccMag-std()             |
+| 82|tBodyAccJerk-mean()-Y         |  |267|fBodyAcc-mean()-Y             |  |513|fBodyAccMag-meanFreq()        |
+| 83|tBodyAccJerk-mean()-Z         |  |268|fBodyAcc-mean()-Z             |  |516|fBodyBodyAccJerkMag-mean()    |
+| 84|tBodyAccJerk-std()-X          |  |269|fBodyAcc-std()-X              |  |517|fBodyBodyAccJerkMag-std()     |
+| 85|tBodyAccJerk-std()-Y          |  |270|fBodyAcc-std()-Y              |  |526|fBodyBodyAccJerkMag-meanFreq()|
+| 86|tBodyAccJerk-std()-Z          |  |271|fBodyAcc-std()-Z              |  |529|fBodyBodyGyroMag-mean()       |
+|121|tBodyGyro-mean()-X            |  |294|fBodyAcc-meanFreq()-X         |  |530|fBodyBodyGyroMag-std()        |
+|122|tBodyGyro-mean()-Y            |  |295|fBodyAcc-meanFreq()-Y         |  |539|fBodyBodyGyroMag-meanFreq()   |
+|123|tBodyGyro-mean()-Z            |  |296|fBodyAcc-meanFreq()-Z         |  |542|fBodyBodyGyroJerkMag-mean()   |
+|124|tBodyGyro-std()-X             |  |345|fBodyAccJerk-mean()-X         |  |543|fBodyBodyGyroJerkMag-std()    |
+|125|tBodyGyro-std()-Y             |  |346|fBodyAccJerk-mean()-Y         |  |552|fBodyBodyGyroJerkMag-meanFreq()|
+|126|tBodyGyro-std()-Z             |  |347|fBodyAccJerk-mean()-Z         |  |   |                              |
+|161|tBodyGyroJerk-mean()-X        |  |348|fBodyAccJerk-std()-X          |  |   |                              |
+|162|tBodyGyroJerk-mean()-Y        |  |349|fBodyAccJerk-std()-Y          |  |   |                              |
+|163|tBodyGyroJerk-mean()-Z        |  |350|fBodyAccJerk-std()-Z          |  |   |                              |
+|164|tBodyGyroJerk-std()-X         |  |373|fBodyAccJerk-meanFreq()-X     |  |   |                              |
 
 
 Figure 9.
